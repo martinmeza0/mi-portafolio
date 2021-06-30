@@ -1,0 +1,38 @@
+nav 
+    width: 100vw
+    position: fixed
+    padding: 20px
+    z-index: 2
+    text-align: right
+    box-shadow: 0px 3px 11px -5px rgba(0,0,0,0.75)
+    background-color: rgba(#0b2a4f, .2)
+
+
+    backdrop-filter: blur(2px) 
+    ul
+        margin-right: 200px
+        li
+            display: inline-block
+            margin: 0 20px        
+            font-size: 1.25rem    
+            a
+                text-decoration: none
+                color: #fff
+                position: relative
+                z-index: 3
+                &::after
+                    bottom: 0
+                    content: ""
+                    height: .125rem
+                    left: 50%
+                    position: absolute
+                    background: #fff
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s
+                    width: 0
+                &:hover::after,
+                &:focus::after,
+                &:active::after
+                    width: 100%
+                    left: 0
+                
+

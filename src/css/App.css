@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d6d9), color-stop(#cfd4d7), color-stop(#ccd1d4), color-stop(#c8cfd2), to(#c4cdcf));
+  background-image: linear-gradient(to bottom, #d3d6d9, #cfd4d7, #ccd1d4, #c8cfd2, #c4cdcf);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+header {
+  height: 78vh;
+  overflow: hidden;
+  background: url("background.jpg") no-repeat;
+  text-align: center;
+}
+
+header .nombre-profesion {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: inline-block;
+  margin-top: 30vh;
+  padding: 40px;
+  border: 1px solid #fff;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+}
+
+header .nombre-profesion h1 {
+  font-weight: 800;
+  color: #fff;
+  font-size: 3.75rem;
+}
+
+header .nombre-profesion h2 {
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.875rem;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  padding: 20px;
+  z-index: 2;
+  text-align: right;
+  -webkit-box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
+  background-color: rgba(11, 42, 79, 0.2);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+nav ul {
+  margin-right: 200px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 1.25rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  content: "";
+  height: .125rem;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
+  width: 100%;
+  left: 0;
+}
+
+main .container {
+  margin-top: 10vh;
+  padding: 20vh;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.proyecto img {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.proyecto img:hover {
+  bottom: 10px;
+  position: relative;
+  -webkit-box-shadow: 0px 20px 10px -12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 20px 10px -12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.Modal {
+  position: absolute;
+  z-index: 4;
+  top: 40px;
+  left: 20%;
+  right: 20%;
+  bottom: 40px;
+  background: none;
+  text-align: right;
+}
+
+.Modal .card__header {
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(12, 106, 221, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Modal .card__header .card__title {
+  display: inline-block;
+  padding: 10px;
+}
+
+.Modal .card__header span {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.Modal .card__body {
+  padding: 10px 40px;
+  background-color: #eee;
+  width: 100%;
+  height: 95%;
+  border-radius: 0 0 10px 10px;
+  margin: auto;
+  text-align: left;
+}
+
+.Modal .card__body img {
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Modal .card__body .card__text {
+  min-height: 70px;
+  max-height: 70px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.Modal .card__body .card__categories {
+  text-align: left;
+  color: #c49106;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.Modal .card__body a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background: #ccc;
+  text-align: center;
+}
+
+.Overlay {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(52, 52, 52, 0.6);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.acerca-de {
+  text-align: center;
+}
+
+.acerca-de .informacion {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=App.css.map */
