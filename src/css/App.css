@@ -22,14 +22,14 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 85%;
   margin: auto;
 }
 
 header {
   height: 78vh;
   overflow: hidden;
-  background: url("background.jpg") no-repeat;
+  background: url("background.jpg") fixed no-repeat center #3277c0;
   text-align: center;
 }
 
