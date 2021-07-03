@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from './components/Menu';
 import Acerca_de from './components/Acerca_de';
 import Proyecto from './components/Proyecto';
+import Contacto from './components/Contacto'
 import './css/App.sass'
 
 
@@ -45,14 +46,15 @@ function App() {
           />
         </div>
       </main>
-      <section className="acerca-de">
+      <section className="acerca-de" id='acerca-de'>
         <div className="container">
           <Acerca_de/>
         </div>
       </section>
 
       <footer>
-        <div className="container">
+        <div className="container" id="contactame">
+          <Contacto/>
         </div>
       </footer>
       </>

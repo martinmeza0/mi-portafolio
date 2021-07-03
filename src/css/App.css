@@ -196,9 +196,8 @@ main .container {
 
 .Modal .card__body .card__categories {
   text-align: left;
-  color: #c49106;
+  color: #f77f00;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .Modal .card__body a {
@@ -235,6 +234,7 @@ main .container {
 }
 
 .acerca-de {
+  margin-top: 20vh;
   text-align: center;
 }
 
@@ -243,5 +243,31 @@ main .container {
   text-align: center;
   padding: 20px 50px;
   border-radius: 10px;
+}
+
+.acerca-de .informacion h3, .acerca-de .informacion h4 {
+  color: #457b9d;
+  margin-bottom: 10px;
+}
+
+.acerca-de .informacion .info-1, .acerca-de .informacion .info-2 {
+  color: #333030;
+  text-align: left;
+}
+
+.acerca-de .informacion .info-2 {
+  text-align: right;
+}
+
+.acerca-de .informacion span {
+  color: #f77f00;
+}
+
+footer .container {
+  margin-top: 30vh;
+}
+
+.contacto h3 {
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

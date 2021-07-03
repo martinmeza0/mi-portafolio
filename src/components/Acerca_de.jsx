@@ -3,15 +3,16 @@ import '../css/_Acerca_De.sass'
 const Acerca_de = () => {
     return (
         <>
-            <div className="informacion">
-                <h3>Sobre mi...</h3>
-                <p>
-                    Soy un programador autodidacta, 
-                </p>
-                <p>
-                    Me gustan las mañanas tranquilas con un buen cafe caliente para empezar el dia <span class="material-icons">local_cafe</span>
-                </p>
-            </div>
+            <section className="informacion">
+                <div className="info-1">
+                    <h3>Sobre mi...</h3>
+                    <p>Soy un <span>Desarrollador Front-end</span> de Argentina, apacionado por el diseño moderno, fluido y minimalista. Siempre tratando de resolver problemas.</p>
+                </div>
+                <div className="info-2">
+                    <h4>...Cuando no estoy programando</h4>
+                    <p>Soy una <span>persona autodidacta</span>, me gusta aprender algo nuevo todo los dias y como aplicarlas en mi vida para ser mejor como persona.</p>
+                </div>
+            </section>
         </>
     )
 }
