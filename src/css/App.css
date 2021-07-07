@@ -16,9 +16,9 @@ html {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d6d9), color-stop(#cfd4d7), color-stop(#ccd1d4), color-stop(#c8cfd2), to(#c4cdcf));
-  background-image: linear-gradient(to bottom, #d3d6d9, #cfd4d7, #ccd1d4, #c8cfd2, #c4cdcf);
+  background-color: #eee;
   font-family: 'Open Sans', sans-serif;
+  color: #333030;
 }
 
 .container {
@@ -29,7 +29,8 @@ body {
 header {
   height: 78vh;
   overflow: hidden;
-  background: url("background.jpg") fixed no-repeat center #3277c0;
+  background: url("background.jpg") fixed no-repeat #3277c0;
+  background-size: cover;
   text-align: center;
 }
 
@@ -234,19 +235,23 @@ main .container {
 }
 
 .acerca-de {
-  margin-top: 20vh;
+  margin-top: 10vh;
   text-align: center;
 }
 
 .acerca-de .informacion {
-  background-color: #eee;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.38);
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.38);
+  background-color: #fff;
   text-align: center;
-  padding: 20px 50px;
+  padding: 5vh 20px;
   border-radius: 10px;
 }
 
 .acerca-de .informacion h3, .acerca-de .informacion h4 {
-  color: #457b9d;
+  color: #2966ac;
+  margin: 0px 50px;
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
@@ -256,6 +261,7 @@ main .container {
 }
 
 .acerca-de .informacion .info-2 {
+  margin-top: 20px;
   text-align: right;
 }
 
@@ -263,11 +269,116 @@ main .container {
   color: #f77f00;
 }
 
-footer .container {
-  margin-top: 30vh;
+.acerca-de .informacion img {
+  width: 25%;
+  margin-top: 30px;
 }
 
-.contacto h3 {
+footer .container {
+  margin-top: 30vh;
   text-align: center;
+}
+
+.contacto .container {
+  margin: 0;
+  background-color: #fff;
+  margin: auto;
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.38);
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.contacto .container h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contacto .container img {
+  display: inline-block;
+  width: 40%;
+}
+
+.contacto form {
+  width: 60%;
+  margin: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 0px 6px 0px rgba(0, 0, 0, 0.48);
+          box-shadow: 1px 0px 6px 0px rgba(0, 0, 0, 0.48);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contacto form input, .contacto form textarea {
+  background: #fff;
+  border: none;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.contacto form input[type='text'],
+.contacto form input[type='email'],
+.contacto form textarea {
+  border-bottom: 2px solid #2966ac;
+}
+
+.contacto form input[type='text']:focus,
+.contacto form input[type='email']:focus,
+.contacto form textarea:focus {
+  border-bottom: 2px solid #f77f00;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.contacto form input::-webkit-input-placeholder, .contacto form textarea::-webkit-input-placeholder {
+  color: #2966ac;
+}
+
+.contacto form input:-ms-input-placeholder, .contacto form textarea:-ms-input-placeholder {
+  color: #2966ac;
+}
+
+.contacto form input::-ms-input-placeholder, .contacto form textarea::-ms-input-placeholder {
+  color: #2966ac;
+}
+
+.contacto form input::placeholder, .contacto form textarea::placeholder {
+  color: #2966ac;
+}
+
+.contacto form textarea {
+  min-height: 130px;
+  max-height: 130px;
+}
+
+.contacto form input[type='button'] {
+  background: #2966ac;
+  width: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.contacto form input[type='button']:hover {
+  background: #f77f00;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.contacto form input[type='button']:active {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65) inset;
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65) inset;
+  background: #b55f03;
+}
+
+.contacto .redes-sociales i {
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #000;
 }
 /*# sourceMappingURL=App.css.map */

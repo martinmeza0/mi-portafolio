@@ -21,7 +21,7 @@ function App() {
       <main>
         <div className="container" id="mis-proyectos">
           <Proyecto
-            imagen='/assets/agenda.jpg'
+            imagen='/assets/img/agenda.jpg'
             titulo="Agenda de contacto"
             categorias="HTML - CSS - JS"
             texto=" Donec iaculis, ligula vitae viverra aliquet, massa mi dapibus leo, id ullamcorper velit purus vel dui. Proin tempor blandit leo vel suscipit. Nam vel eros a leo sagittis volutpat in auctor risus. Mauris ultricies sem fringilla quam facilisis, at convallis erat euismod. "
@@ -29,7 +29,7 @@ function App() {
             linkCode="https://github.com/martinmeza0/agenda-contacto"
           />
           <Proyecto
-            imagen='/assets/agenda.jpg'
+            imagen='/assets/img/agenda.jpg'
             titulo="Agenda de contacto"
             categorias="HTML - CSS - JS"
             texto="una agenda de contacto, la informacion se guarda en el local storage del navegador"
@@ -37,7 +37,7 @@ function App() {
             linkCode="https://github.com/martinmeza0/agenda-contacto"
           />
           <Proyecto
-            imagen='/assets/agenda.jpg'
+            imagen='/assets/img/agenda.jpg'
             titulo="Agenda de contacto"
             categorias="HTML - CSS - JS"
             texto="una agenda de contacto, la informacion se guarda en el local storage del navegador"
@@ -51,7 +51,6 @@ function App() {
           <Acerca_de/>
         </div>
       </section>
-
       <footer>
         <div className="container" id="contactame">
           <Contacto/>
