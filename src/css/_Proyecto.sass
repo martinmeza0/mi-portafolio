@@ -1,74 +1,77 @@
 .proyecto
+    position: relative   
+    bottom: 0
+    border-radius: 10px 
+    transition: .5s 
+    // background-color: #2966ac4d
+    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.45)
+    &:hover 
+        bottom: 10px
+        position: relative  
+        box-shadow: 0px 20px 10px -12px rgba(0,0,0,0.25)
+        cursor: pointer
+    .titulo
+        // text-align: center
+        // background: #ccc
+        padding: 2px 5px
+        font-size: 1rem
     img  
-        position: relative   
-        bottom: 0
-        width: 100%
+        // position: relative
+        margin: 0
         height: 100%
-        border-radius: 10px
-        box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.45)
-        transition: .5s 
-        &:hover
-            bottom: 10px
-            position: relative  
-            box-shadow: 0px 20px 10px -12px rgba(0,0,0,0.25)
-            cursor: pointer
+        width: 100%
+        border-radius: 10px 
+
 
 .Modal 
     position: absolute
     z-index: 4
-    top: 40px
-    left: 20%
-    right: 20%
-    bottom: 40px
+    top: 10%
+    left: 25%
+    right: 25%
+    bottom: 10%
     background: none
-    text-align: right   
-
-    .card__header
-        border-radius: 10px 10px 0 0
-        background-color: rgba(12, 106, 221, .5)
-        backdrop-filter: blur(5px) 
-        color: #fff
-        display: flex
-        justify-content: space-between
-        .card__title
-            display: inline-block
-            padding: 10px
-        span 
-            display: inline-block
-            cursor: pointer
-            padding: 10px
-
+    text-align: right  
     .card__body 
-        padding: 10px 40px
-        background-color: #eee
+        background-color: rgb(238, 238, 238)
         width: 100%
-        height: 95%
-        border-radius: 0 0 10px 10px
         margin: auto
         text-align: left
+        .borrar
+            position: absolute
+            color: #fff
+            right: 0
+            top: -25px
+            cursor: pointer
         img
-            display: block
-            margin: auto
-            border-radius: 5px
-            width: 80% 
-            margin-bottom: 20px
-        .card__text
-            min-height: 70px
-            max-height: 70px
+            width: 100% 
+            // .titulo
+            //     display: block
+            //     text-align: center
+            //     margin-bottom: 10px
+        .descripcion
+            padding: 10px
+            min-height: 100px
+            max-height: 100px
             overflow: auto
             margin-bottom: 10px
-        .card__categories
-            text-align: left
-            color: #f77f00
-            margin-bottom: 20px
-        a
-            display: inline-block
-            text-decoration: none
-            padding: 10px 20px
-            margin-right: 10px
-            background: #ccc
-            text-align: center
-                
+        .card-container
+            display: flex
+            align-content: space-between
+            .categorias
+                margin: auto
+                text-align: left
+                color: #f77f00
+            .link
+                margin-left: auto
+                text-align: right
+                a   
+                    display: inline-flex
+                    text-decoration: none
+                    padding: 10px 20px
+                    color: #2966ac
+                    margin-right: 10px
+                    margin-bottom: 5px
 .Overlay 
     position: fixed
     z-index: 3

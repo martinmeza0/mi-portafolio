@@ -55,6 +55,10 @@ function App() {
         <div className="container" id="contactame">
           <Contacto/>
         </div>
+         <div className="redes-sociales">
+            <i class="fab fa-linkedin-in"><a href="#"></a></i>
+            <i class="fab fa-github"><a href="#"></a></i>
+        </div> 
       </footer>
       </>
     );

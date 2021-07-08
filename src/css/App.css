@@ -105,8 +105,8 @@ nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
 }
 
 main .container {
-  margin-top: 10vh;
-  padding: 20vh 0;
+  padding-bottom: 30vh;
+  padding-top: 30vh;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -114,19 +114,17 @@ main .container {
       grid-template-columns: repeat(3, 1fr);
 }
 
-.proyecto img {
+.proyecto {
   position: relative;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
-          box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
   -webkit-transition: .5s;
   transition: .5s;
+  -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
 }
 
-.proyecto img:hover {
+.proyecto:hover {
   bottom: 10px;
   position: relative;
   -webkit-box-shadow: 0px 20px 10px -12px rgba(0, 0, 0, 0.25);
@@ -134,80 +132,84 @@ main .container {
   cursor: pointer;
 }
 
+.proyecto .titulo {
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+
+.proyecto img {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
 .Modal {
   position: absolute;
   z-index: 4;
-  top: 40px;
-  left: 20%;
-  right: 20%;
-  bottom: 40px;
+  top: 10%;
+  left: 25%;
+  right: 25%;
+  bottom: 10%;
   background: none;
   text-align: right;
 }
 
-.Modal .card__header {
-  border-radius: 10px 10px 0 0;
-  background-color: rgba(12, 106, 221, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.Modal .card__header .card__title {
-  display: inline-block;
-  padding: 10px;
-}
-
-.Modal .card__header span {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px;
-}
-
 .Modal .card__body {
-  padding: 10px 40px;
-  background-color: #eee;
+  background-color: #eeeeee;
   width: 100%;
-  height: 95%;
-  border-radius: 0 0 10px 10px;
   margin: auto;
   text-align: left;
 }
 
-.Modal .card__body img {
-  display: block;
-  margin: auto;
-  border-radius: 5px;
-  width: 80%;
-  margin-bottom: 20px;
+.Modal .card__body .borrar {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  top: -25px;
+  cursor: pointer;
 }
 
-.Modal .card__body .card__text {
-  min-height: 70px;
-  max-height: 70px;
+.Modal .card__body img {
+  width: 100%;
+}
+
+.Modal .card__body .descripcion {
+  padding: 10px;
+  min-height: 100px;
+  max-height: 100px;
   overflow: auto;
   margin-bottom: 10px;
 }
 
-.Modal .card__body .card__categories {
-  text-align: left;
-  color: #f77f00;
-  margin-bottom: 20px;
+.Modal .card__body .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
-.Modal .card__body a {
-  display: inline-block;
+.Modal .card__body .card-container .categorias {
+  margin: auto;
+  text-align: left;
+  color: #f77f00;
+}
+
+.Modal .card__body .card-container .link {
+  margin-left: auto;
+  text-align: right;
+}
+
+.Modal .card__body .card-container .link a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   text-decoration: none;
   padding: 10px 20px;
+  color: #2966ac;
   margin-right: 10px;
-  background: #ccc;
-  text-align: center;
+  margin-bottom: 5px;
 }
 
 .Overlay {
@@ -235,7 +237,8 @@ main .container {
 }
 
 .acerca-de {
-  margin-top: 10vh;
+  padding-bottom: 20vh;
+  padding-top: 15vh;
   text-align: center;
 }
 
@@ -275,7 +278,7 @@ main .container {
 }
 
 footer .container {
-  margin-top: 30vh;
+  padding-top: 15vh;
   text-align: center;
 }
 
@@ -322,13 +325,13 @@ footer .container {
 .contacto form input[type='text'],
 .contacto form input[type='email'],
 .contacto form textarea {
-  border-bottom: 2px solid #2966ac;
+  border-bottom: 1px solid #2966ac;
 }
 
 .contacto form input[type='text']:focus,
 .contacto form input[type='email']:focus,
 .contacto form textarea:focus {
-  border-bottom: 2px solid #f77f00;
+  border-bottom: 1px solid #f77f00;
   -webkit-transition: .3s all;
   transition: .3s all;
 }
@@ -374,11 +377,44 @@ footer .container {
   background: #b55f03;
 }
 
-.contacto .redes-sociales i {
-  padding: 10px 20px;
-  margin: 0 5px;
+.redes-sociales {
+  margin-top: 10px;
+  text-align: center;
+  padding: 30px 0;
+  background: url("background.jpg") fixed no-repeat #3277c0;
+  background-size: cover;
+}
+
+.redes-sociales i {
+  position: relative;
+  padding: 10px 10px;
+  margin: 0 20px;
+  border-radius: 100%;
   color: #fff;
-  font-size: 1.5rem;
-  background-color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.redes-sociales i::after {
+  bottom: 0;
+  content: "";
+  height: .125rem;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.redes-sociales i:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.redes-sociales i:active {
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #ccc;
 }
 /*# sourceMappingURL=App.css.map */

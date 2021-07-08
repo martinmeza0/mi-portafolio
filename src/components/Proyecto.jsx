@@ -9,9 +9,9 @@ const Proyecto = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
         <>
-            <div className="proyecto">
-                <img src={imagen} alt="" onClick={() => setModalIsOpen(true)}/>
-
+            <div className="proyecto" onClick={() => setModalIsOpen(true)}>
+                <h3 className="titulo">{titulo}</h3>
+                <img src={imagen} alt="" />
             </div>
 
             <Modal 
@@ -19,17 +19,18 @@ const Proyecto = (props) => {
                 className="Modal" overlayClassName="Overlay" 
             >
                 
-                
-                <div className="card__header">
-                    <h3 className="card__title">{titulo}</h3>
-                    <span class="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
-                </div>
                 <div className="card__body">
+                    <span class="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
                     <img src={imagen} alt=""/>  
-                    <p className="card__text">{texto}</p>
-                    <h6 className="card__categories">{categorias}</h6>
-                    <a href={linkPag}>Ir a la pagina</a>
-                    <a href={linkCode}>Ir al codigo</a>
+                    <p className="descripcion">{texto}</p>
+                    <div className="card-container">
+                        <p className="categorias">{categorias} </p>
+                        <div className="link">
+                            <a href={linkPag}>Demostracion <span class="material-icons">play_arrow</span></a>
+                            <a href={linkCode}>Codigo <span class="material-icons">code</span></a>
+                        </div>
+                    </div>
+                    
                 </div>
             </Modal>
         </>

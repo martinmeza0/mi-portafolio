@@ -1,6 +1,6 @@
 footer 
     .container 
-        margin-top: 30vh
+        padding-top: 15vh
         text-align: center
     
 .contacto
@@ -37,9 +37,9 @@ footer
         input[type='text'],
         input[type='email'],
         textarea
-            border-bottom: 2px solid #2966ac
+            border-bottom: 1px solid #2966ac
             &:focus 
-                border-bottom: 2px solid #f77f00
+                border-bottom: 1px solid #f77f00
                 transition: .3s all
                 
         input::placeholder,textarea::placeholder
@@ -61,10 +61,32 @@ footer
                 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65) inset
                 background: #b55f03
 
-    .redes-sociales
-        i
-            padding: 10px 20px
-            margin: 0 5px 
-            color: #fff
-            font-size: 1.5rem
-            background-color: #000
+.redes-sociales
+    margin-top: 10px
+    text-align: center
+    padding: 30px 0
+    background: url('background.jpg') fixed no-repeat  #3277c0
+    background-size: cover
+    i   
+        position: relative
+        padding: 10px 10px
+        margin: 0 20px
+        border-radius: 100%
+        color: #fff
+        font-size: 2rem
+        cursor: pointer
+        &::after
+            bottom: 0
+            content: ""
+            height: .125rem
+            left: 50%
+            position: absolute
+            background: #fff
+            transition: width 0.3s ease 0s, left 0.3s ease 0s
+            width: 0
+        &:hover::after
+            width: 100%
+            left: 0
+        &:active
+            transition: .3s
+            color: #ccc
