@@ -4,6 +4,10 @@ const Menu = () => {
     return (
         <>
             <nav>
+                <input type="checkbox" id="check"/>
+                <label for="check" className="checkbtn">
+                    <i className="fas fa-bars"></i>
+                </label>
                 <ul>
                     <li><a href="#mis-proyectos">Mis proyectos</a></li>
                     <li><a href="#acerca-de">Sobre mi</a></li>

@@ -1,27 +1,19 @@
 .proyecto
-    position: relative   
-    bottom: 0
-    border-radius: 10px 
-    transition: .5s 
-    // background-color: #2966ac4d
-    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.45)
-    &:hover 
-        bottom: 10px
-        position: relative  
-        box-shadow: 0px 20px 10px -12px rgba(0,0,0,0.25)
-        cursor: pointer
-    .titulo
-        // text-align: center
-        // background: #ccc
-        padding: 2px 5px
-        font-size: 1rem
     img  
-        // position: relative
+        position: relative   
+        bottom: 0
+        border-radius: 10px 
+        transition: .5s 
+        box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.45)
         margin: 0
         height: 100%
         width: 100%
         border-radius: 10px 
-
+        &:hover 
+            bottom: 10px
+            position: relative  
+            box-shadow: 0px 20px 10px -12px rgba(0,0,0,0.25)
+            cursor: pointer
 
 .Modal 
     position: absolute
@@ -32,23 +24,27 @@
     bottom: 10%
     background: none
     text-align: right  
-    .card__body 
+    
+    .header
+        display: flex
+        background: none
+        color: #fff
+        .titulo
+            display: block
+            margin-right: auto
+        .borrar
+            cursor: pointer
+            &:hover
+                transition: all .3s
+                color: #ef233c
+    .body 
         background-color: rgb(238, 238, 238)
         width: 100%
         margin: auto
         text-align: left
-        .borrar
-            position: absolute
-            color: #fff
-            right: 0
-            top: -25px
-            cursor: pointer
+
         img
             width: 100% 
-            // .titulo
-            //     display: block
-            //     text-align: center
-            //     margin-bottom: 10px
         .descripcion
             padding: 10px
             min-height: 100px
@@ -85,10 +81,13 @@
 //transicion de modal
 .ReactModal__Overlay 
     opacity: 0
+    top: -100px
     transition: all 300ms 
 
 .ReactModal__Overlay--after-open
     opacity: 1
+    top: 0
     
 .ReactModal__Overlay--before-close
     opacity: 0
+    top: -100px

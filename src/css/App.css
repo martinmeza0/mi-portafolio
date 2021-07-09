@@ -71,7 +71,7 @@ nav {
 }
 
 nav ul {
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 nav ul li {
@@ -104,6 +104,18 @@ nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
   left: 0;
 }
 
+nav .checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  margin-right: 2.5rem;
+  cursor: pointer;
+}
+
+nav #check, nav .checkbtn {
+  display: none;
+}
+
 main .container {
   padding-bottom: 30vh;
   padding-top: 30vh;
@@ -114,7 +126,7 @@ main .container {
       grid-template-columns: repeat(3, 1fr);
 }
 
-.proyecto {
+.proyecto img {
   position: relative;
   bottom: 0;
   border-radius: 10px;
@@ -122,26 +134,18 @@ main .container {
   transition: .5s;
   -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.proyecto:hover {
+.proyecto img:hover {
   bottom: 10px;
   position: relative;
   -webkit-box-shadow: 0px 20px 10px -12px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 20px 10px -12px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-}
-
-.proyecto .titulo {
-  padding: 2px 5px;
-  font-size: 1rem;
-}
-
-.proyecto img {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
 }
 
 .Modal {
@@ -155,26 +159,41 @@ main .container {
   text-align: right;
 }
 
-.Modal .card__body {
+.Modal .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  color: #fff;
+}
+
+.Modal .header .titulo {
+  display: block;
+  margin-right: auto;
+}
+
+.Modal .header .borrar {
+  cursor: pointer;
+}
+
+.Modal .header .borrar:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #ef233c;
+}
+
+.Modal .body {
   background-color: #eeeeee;
   width: 100%;
   margin: auto;
   text-align: left;
 }
 
-.Modal .card__body .borrar {
-  position: absolute;
-  color: #fff;
-  right: 0;
-  top: -25px;
-  cursor: pointer;
-}
-
-.Modal .card__body img {
+.Modal .body img {
   width: 100%;
 }
 
-.Modal .card__body .descripcion {
+.Modal .body .descripcion {
   padding: 10px;
   min-height: 100px;
   max-height: 100px;
@@ -182,7 +201,7 @@ main .container {
   margin-bottom: 10px;
 }
 
-.Modal .card__body .card-container {
+.Modal .body .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,18 +209,18 @@ main .container {
       align-content: space-between;
 }
 
-.Modal .card__body .card-container .categorias {
+.Modal .body .card-container .categorias {
   margin: auto;
   text-align: left;
   color: #f77f00;
 }
 
-.Modal .card__body .card-container .link {
+.Modal .body .card-container .link {
   margin-left: auto;
   text-align: right;
 }
 
-.Modal .card__body .card-container .link a {
+.Modal .body .card-container .link a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -224,16 +243,19 @@ main .container {
 
 .ReactModal__Overlay {
   opacity: 0;
+  top: -100px;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
+  top: 0;
 }
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+  top: -100px;
 }
 
 .acerca-de {
@@ -416,5 +438,58 @@ footer .container {
   -webkit-transition: .3s;
   transition: .3s;
   color: #ccc;
+}
+
+@media screen and (max-width: 64em) {
+  nav ul {
+    margin-right: 0;
+  }
+  .Modal {
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  nav {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: none;
+    background-filter: none;
+    blur: none;
+  }
+  nav .checkbtn {
+    display: block;
+    z-index: 2;
+  }
+  nav ul {
+    position: fixed;
+    z-index: 1;
+    width: 30%;
+    height: 50vh;
+    -webkit-box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
+    background-color: rgba(11, 42, 79, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    padding-top: 50px;
+    /* When the menu button is not clicked, the ul element is hidden */
+    right: -100%;
+    text-align: right;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 30px 20px;
+    line-height: 1.875em;
+    font-size: 20px;
+  }
+  nav #check:checked ~ ul {
+    /* when the menu button is clicked, the ul element appears from the right */
+    right: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

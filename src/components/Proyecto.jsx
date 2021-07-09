@@ -9,29 +9,31 @@ const Proyecto = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
     return (
         <>
-            <div className="proyecto" onClick={() => setModalIsOpen(true)}>
-                <h3 className="titulo">{titulo}</h3>
-                <img src={imagen} alt="" />
+            <div className="proyecto">
+                <img src={imagen} alt="" onClick={() => setModalIsOpen(true)}/>
             </div>
 
             <Modal 
                 isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} preventScroll={true} closeTimeoutMS={300}
                 className="Modal" overlayClassName="Overlay" 
             >
-                
-                <div className="card__body">
-                    <span class="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
-                    <img src={imagen} alt=""/>  
-                    <p className="descripcion">{texto}</p>
-                    <div className="card-container">
-                        <p className="categorias">{categorias} </p>
-                        <div className="link">
-                            <a href={linkPag}>Demostracion <span class="material-icons">play_arrow</span></a>
-                            <a href={linkCode}>Codigo <span class="material-icons">code</span></a>
+                <section className="modal-container">
+                    <div className="header">
+                        <h3 className="titulo">{titulo}</h3>
+                        <span class="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
+                    </div>
+                    <div className="body">
+                        <img src={imagen} alt=""/>  
+                        <p className="descripcion">{texto}</p>
+                        <div className="card-container">
+                            <p className="categorias">{categorias} </p>
+                            <div className="link">
+                                <a href={linkPag}>Demostracion <span class="material-icons">play_arrow</span></a>
+                                <a href={linkCode}>Codigo <span class="material-icons">code</span></a>
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
+                </section>
             </Modal>
         </>
     )

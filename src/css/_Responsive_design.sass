@@ -1,0 +1,48 @@
+//Laptop
+@media screen and (max-width: 64em)
+    //header
+    nav
+        ul
+            margin-right: 0
+
+    //main
+    .Modal
+        top: 10%
+        left: 20%
+        right: 20%
+        bottom: 10%
+//Tablet
+@media screen and (max-width: 48rem)
+    nav 
+        box-shadow: none
+        background: none
+        background-filter: none
+        blur: none
+        .checkbtn 
+            display: block
+            z-index: 2
+        ul 
+            position: fixed
+            z-index: 1
+            width: 30%
+            height: 50vh
+            box-shadow: 0px 3px 11px -5px rgba(0,0,0,0.75)
+            background-color: rgba(#0b2a4f, .2)
+            backdrop-filter: blur(2px) 
+            padding-top: 50px
+            /* When the menu button is not clicked, the ul element is hidden */
+            right: -100%
+            text-align: right
+            transition: all .5s
+            li 
+                display: block
+                margin: 30px 20px
+                line-height: 1.875em
+                a 
+                font-size: 20px
+        #check:checked ~ ul 
+            /* when the menu button is clicked, the ul element appears from the right */
+            right: 0
+        
+
+

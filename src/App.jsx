@@ -19,7 +19,7 @@ function App() {
         </div>
       </header>
       <main>
-        <div className="container" id="mis-proyectos">
+        <article className="container" id="mis-proyectos">
           <Proyecto
             imagen='/assets/img/agenda.jpg'
             titulo="Agenda de contacto"
@@ -44,7 +44,7 @@ function App() {
             linkPag="https://martinmeza0.github.io/agenda-contacto/"
             linkCode="https://github.com/martinmeza0/agenda-contacto"
           />
-        </div>
+        </article>
       </main>
       <section className="acerca-de" id='acerca-de'>
         <div className="container">
@@ -56,8 +56,8 @@ function App() {
           <Contacto/>
         </div>
          <div className="redes-sociales">
-            <i class="fab fa-linkedin-in"><a href="#"></a></i>
-            <i class="fab fa-github"><a href="#"></a></i>
+            <a href="https://www.linkedin.com/in/martin-meza-0640311b7/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/martinmeza0"><i class="fab fa-github"></i></a>
         </div> 
       </footer>
       </>
