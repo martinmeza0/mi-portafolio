@@ -4,13 +4,12 @@
     nav
         ul
             margin-right: 0
-
     //main
     .Modal
         top: 10%
         left: 20%
         right: 20%
-        bottom: 10%
+
 //Tablet
 @media screen and (max-width: 48rem)
     nav 
@@ -18,31 +17,72 @@
         background: none
         background-filter: none
         blur: none
-        .checkbtn 
+        z-index: 2
+        padding: 0
+        .checkbtn
             display: block
-            z-index: 2
-        ul 
-            position: fixed
-            z-index: 1
-            width: 30%
-            height: 50vh
-            box-shadow: 0px 3px 11px -5px rgba(0,0,0,0.75)
+            margin-top: 10px
+            position: relative
+            z-index: 3
+        ul               
+            position: absolute
+            width: 30vw
+            padding-top: 2rem
+            height: 100vh
+            right: -100%
             background-color: rgba(#0b2a4f, .2)
             backdrop-filter: blur(2px) 
-            padding-top: 50px
-            /* When the menu button is not clicked, the ul element is hidden */
-            right: -100%
-            text-align: right
             transition: all .5s
-            li 
-                display: block
-                margin: 30px 20px
-                line-height: 1.875em
-                a 
-                font-size: 20px
-        #check:checked ~ ul 
-            /* when the menu button is clicked, the ul element appears from the right */
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            li
+                margin-top: 70px
+                a   
+                    font-size: 1.25rem
+        #check:checked ~ ul
             right: 0
-        
 
+    main .container
+        grid-template-columns: repeat(2, 1fr)
+    
+    .contacto
+        .container
+            width: 60%
+        form
+            width: 80%
 
+//Mobile
+@media screen and (max-width: 26.5625rem)
+    header
+        .nombre-profesion
+            padding: 20px
+            h1
+                font-size: 2.5rem
+            h2
+                font-size: 1.5rem
+    nav ul
+        width: 50vw
+    main .container
+        grid-template-columns: 1fr
+    .Modal
+        top: 10%
+        left: 5%
+        right: 5%
+    .card-container
+        flex-direction: column
+        align-content: space-between
+    .acerca-de .informacion
+        padding: 5vh 15px
+        h3,h4
+            font-size: 1.1rem
+            margin: 15px 10px
+        img
+            width: 50%
+    
+    .contacto
+        .container
+            width: 80%
+        form
+            width: 100%

@@ -154,7 +154,7 @@ main .container {
   top: 10%;
   left: 25%;
   right: 25%;
-  bottom: 10%;
+  bottom: 20%;
   background: none;
   text-align: right;
 }
@@ -448,7 +448,6 @@ footer .container {
     top: 10%;
     left: 20%;
     right: 20%;
-    bottom: 10%;
   }
 }
 
@@ -459,37 +458,106 @@ footer .container {
     background: none;
     background-filter: none;
     blur: none;
+    z-index: 2;
+    padding: 0;
   }
   nav .checkbtn {
     display: block;
-    z-index: 2;
+    margin-top: 10px;
+    position: relative;
+    z-index: 3;
   }
   nav ul {
-    position: fixed;
-    z-index: 1;
-    width: 30%;
-    height: 50vh;
-    -webkit-box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 3px 11px -5px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    width: 30vw;
+    padding-top: 2rem;
+    height: 100vh;
+    right: -100%;
     background-color: rgba(11, 42, 79, 0.2);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
-    padding-top: 50px;
-    /* When the menu button is not clicked, the ul element is hidden */
-    right: -100%;
-    text-align: right;
     -webkit-transition: all .5s;
     transition: all .5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   nav ul li {
-    display: block;
-    margin: 30px 20px;
-    line-height: 1.875em;
-    font-size: 20px;
+    margin-top: 70px;
+  }
+  nav ul li a {
+    font-size: 1.25rem;
   }
   nav #check:checked ~ ul {
-    /* when the menu button is clicked, the ul element appears from the right */
     right: 0;
+  }
+  main .container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .contacto .container {
+    width: 60%;
+  }
+  .contacto form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 26.5625rem) {
+  header .nombre-profesion {
+    padding: 20px;
+  }
+  header .nombre-profesion h1 {
+    font-size: 2.5rem;
+  }
+  header .nombre-profesion h2 {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    width: 50vw;
+  }
+  main .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .Modal {
+    top: 10%;
+    left: 5%;
+    right: 5%;
+  }
+  .card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .acerca-de .informacion {
+    padding: 5vh 15px;
+  }
+  .acerca-de .informacion h3, .acerca-de .informacion h4 {
+    font-size: 1.1rem;
+    margin: 15px 10px;
+  }
+  .acerca-de .informacion img {
+    width: 50%;
+  }
+  .contacto .container {
+    width: 80%;
+  }
+  .contacto form {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */
