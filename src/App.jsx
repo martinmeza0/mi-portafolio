@@ -1,12 +1,13 @@
 import React from 'react';
 import Menu from './components/Menu';
-import Acerca_de from './components/Acerca_de';
+import AcercaDe from './components/AcercaDe';
 import Proyecto from './components/Proyecto';
 import Contacto from './components/Contacto'
 import './css/App.sass'
 
 
 function App() {
+  // history.replaceState(stateObj, '', 'bar2.html')
   return (
       <>
       <header>
@@ -48,7 +49,7 @@ function App() {
       </main>
       <section className="acerca-de" id='acerca-de'>
         <div className="container">
-          <Acerca_de/>
+          <AcercaDe/>
         </div>
       </section>
       <footer>
@@ -56,8 +57,8 @@ function App() {
           <Contacto/>
         </div>
          <div className="redes-sociales">
-            <a href="https://www.linkedin.com/in/martin-meza-0640311b7/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/martinmeza0"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/martin-meza-0640311b7/"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/martinmeza0"><i className="fab fa-github"></i></a>
         </div> 
       </footer>
       </>

@@ -45,10 +45,10 @@ footer
         input::placeholder,textarea::placeholder
             color: #2966ac
         textarea
-            min-height: 130px
-            max-height: 130px
+            resize: none
+            height: 130px
 
-        input[type='button'] 
+        input[type='submit'] 
             background: #2966ac
             width: 50%
             color: #fff
@@ -61,32 +61,16 @@ footer
                 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65) inset
                 background: #b55f03
 
-.redes-sociales
-    margin-top: 10px
-    text-align: center
-    padding: 30px 0
-    background: url('background.jpg') fixed no-repeat  #3277c0
-    background-size: cover
-    i   
-        position: relative
-        padding: 10px 10px
-        margin: 0 20px
-        border-radius: 100%
-        color: #fff
-        font-size: 2rem
-        cursor: pointer
-        &::after
-            bottom: 0
-            content: ""
-            height: .125rem
-            left: 50%
-            position: absolute
-            background: #fff
-            transition: width 0.3s ease 0s, left 0.3s ease 0s
-            width: 0
-        &:hover::after
-            width: 100%
-            left: 0
-        &:active
-            transition: .3s
-            color: #ccc
+//errores 
+.error
+    // position: absolute
+    display: block
+    color: #ef233c
+    text-align: left
+    width: 90%
+    margin: auto
+    font-size: .9rem
+    margin-bottom: 2px
+    &::before
+        content: '⚠ '
+        display: inline

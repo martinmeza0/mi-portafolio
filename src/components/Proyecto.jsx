@@ -20,7 +20,7 @@ const Proyecto = (props) => {
                 <section className="modal-container">
                     <div className="header">
                         <h3 className="titulo">{titulo}</h3>
-                        <span class="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
+                        <span className="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
                     </div>
                     <div className="body">
                         <img src={imagen} alt=""/>  
@@ -28,8 +28,8 @@ const Proyecto = (props) => {
                         <div className="card-container">
                             <p className="categorias">{categorias} </p>
                             <div className="link">
-                                <a href={linkPag}>Demostracion <span class="material-icons">play_arrow</span></a>
-                                <a href={linkCode}>Codigo <span class="material-icons">code</span></a>
+                                <a href={linkPag}>Demostracion <span className="material-icons">play_arrow</span></a>
+                                <a href={linkCode}>Codigo <span className="material-icons">code</span></a>
                             </div>
                         </div>
                     </div>

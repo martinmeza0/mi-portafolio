@@ -5,7 +5,7 @@ const Menu = () => {
         <>
             <nav>
                 <input type="checkbox" id="check"/>
-                <label for="check" className="checkbtn">
+                <label htmlFor="check" className="checkbtn">
                     <i className="fas fa-bars"></i>
                 </label>
                 <ul>

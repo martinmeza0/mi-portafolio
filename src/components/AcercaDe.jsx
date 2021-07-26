@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/_Acerca_De.sass'
-const Acerca_de = () => {
+const AcercaDe = () => {
     return (
         <>
             <section className="informacion">
@@ -18,4 +18,4 @@ const Acerca_de = () => {
     )
 }
 
-export default Acerca_de
+export default AcercaDe

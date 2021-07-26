@@ -37,10 +37,41 @@ nav
         font-size: 30px
         color: #fff
         float: right
-        // line-height: 5rem
         margin-right: 2.5rem
         cursor: pointer
 
     #check, .checkbtn 
         display: none
 
+@media screen and (max-width: 48rem)
+    nav 
+        box-shadow: none
+        background: none
+        background-filter: none
+        blur: none
+        z-index: 2
+        padding: 0
+        .checkbtn
+            display: block
+            margin-top: 10px
+            position: relative
+            z-index: 3
+        ul               
+            position: absolute
+            width: 35vw
+            padding-top: 2rem
+            height: 100vh
+            right: -100%
+            background-color: rgba(#0b2a4f, .3)
+            backdrop-filter: blur(2px) 
+            transition: all .5s
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-start
+            li
+                margin-top: 70px
+                a   
+                    font-size: 1.25rem
+        #check:checked ~ ul
+            right: 0
