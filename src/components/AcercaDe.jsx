@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/_Acerca_De.sass'
+import '../css/_Acerca_De.sass';
 const AcercaDe = () => {
     return (
         <>

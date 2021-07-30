@@ -1,10 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../css/_Proyecto.sass';
 import Modal from './Modal';
+
 const Proyecto = (props) => {
     const {imagen, titulo, categorias, texto, linkPag, linkCode} = props 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     
+    useEffect(() => {
+        document.addEventListener('click', Modal)
+        return () => {
+          document.removeEventListener('click', Modal);
+        }
+    })
     return (
         <>
             <div className="proyecto">
@@ -12,8 +19,8 @@ const Proyecto = (props) => {
             </div>
 
             <Modal open={modalIsOpen}>
-                <div className="overlay">
-                    <div className="Modal">
+                <div className="overlay" onClick={() => setModalIsOpen(false)}>
+                    <div className="Modal" onClick={(e) => e.stopPropagation()}>
                         <section className="header">
                             <h3 className="titulo">{titulo}</h3>
                             <span className="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>

@@ -2,6 +2,7 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 import '../css/_Contacto.sass';
 import emailjs from 'emailjs-com';
+import Modal from './Modal';
 
 const Contacto = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -72,7 +73,9 @@ const Contacto = () => {
                         />
                     </form>  
             </section>  
+            <Modal>
 
+            </Modal>
         </>
     )
 }

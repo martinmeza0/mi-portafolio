@@ -1,5 +1,5 @@
-import React from 'react'
-import '../css/_Menu.sass'
+import React from 'react';
+import '../css/_Menu.sass';
 const Menu = () => {
     return (
         <>

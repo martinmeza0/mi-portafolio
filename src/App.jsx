@@ -2,8 +2,8 @@ import React from 'react';
 import Menu from './components/Menu';
 import AcercaDe from './components/AcercaDe';
 import Proyecto from './components/Proyecto';
-import Contacto from './components/Contacto'
-import './css/App.sass'
+import Contacto from './components/Contacto';
+import './css/App.sass';
 
 
 function App() {
