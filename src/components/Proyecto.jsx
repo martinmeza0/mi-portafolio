@@ -17,10 +17,9 @@ const Proyecto = (props) => {
             <div className="proyecto">
                 <img src={imagen} alt="" onClick={() => setModalIsOpen(true)}/>
             </div>
-
-            <Modal open={modalIsOpen}>
+            <Modal open={modalIsOpen} >
                 <div className="overlay" onClick={() => setModalIsOpen(false)}>
-                    <div className="Modal" onClick={(e) => e.stopPropagation()}>
+                    <div className='Modal' onClick={(e) => e.stopPropagation()}>
                         <section className="header">
                             <h3 className="titulo">{titulo}</h3>
                             <span className="borrar material-icons" onClick={() => setModalIsOpen(false)}>close</span>
@@ -39,7 +38,6 @@ const Proyecto = (props) => {
                     </div>
                 </div>
             </Modal>
-
         </>
     )
 }

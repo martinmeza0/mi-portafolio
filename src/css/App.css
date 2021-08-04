@@ -246,14 +246,14 @@ main .container {
   bottom: 20%;
   background: none;
   text-align: right;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
   -webkit-animation-name: Modal-animation;
           animation-name: Modal-animation;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .Modal .header {
@@ -321,6 +321,13 @@ main .container {
   color: #2966ac;
   margin-right: 10px;
   margin-bottom: 5px;
+}
+
+.Modal .body .card-container .link a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 @-webkit-keyframes Modal-animation {
@@ -471,15 +478,19 @@ footer .container {
 }
 
 .contacto form input[type='submit']:hover {
-  background: #f77f00;
+  background: #317bd0;
   -webkit-transition: .3s all;
   transition: .3s all;
 }
 
 .contacto form input[type='submit']:active {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65) inset;
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65) inset;
-  background: #b55f03;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  color: #eee;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 .error {
@@ -500,51 +511,103 @@ footer .container {
 .pop-up {
   position: fixed;
   z-index: 4;
-  top: 21%;
-  left: 50%;
-  width: 40vw;
-  height: 20vh;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 5vh;
+  right: 30vw;
+  left: 30vw;
   background-color: #fff;
   -webkit-box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.45);
   border-radius: 10px;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
-  -webkit-animation-name: Modal-animation;
-          animation-name: Modal-animation;
+  -webkit-animation-name: pop-up_animation;
+          animation-name: pop-up_animation;
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .pop-up img {
-  width: 20%;
-  margin: 0 20px;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .pop-up p {
-  width: 80%;
-  margin-top: 5px;
   font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@keyframes Modal-animation {
-  from {
-    top: -100%;
+.pop-up button {
+  background: #2966ac;
+  padding: 10px 20px;
+  margin: auto;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.pop-up button:hover {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+@-webkit-keyframes pop-up_animation {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
-  to {
-    top: 10%;
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop-up_animation {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.overlay_pop-up {
+  background-color: rgba(52, 52, 52, 0.1);
 }
 
 footer .redes-sociales {

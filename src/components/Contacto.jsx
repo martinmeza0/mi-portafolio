@@ -15,20 +15,15 @@ const Contacto = () => {
             email: data.Correo,
             message: data.Mensaje
         }
-        // emailjs.send("service_zhua4wc","template_spqer1u", Datos, "user_HPt4N1jpTCSwJcAv87Vgq")
-            // .then(function(response) {
-        // setTimeout(setModalIsOpen(true), 5000)
-        setTimeout = (() => {
-            setModalIsOpen(true)
-        }, 400)
-        e.target.reset();
-    
-        // } 
-        // setModalIsOpen(false)
-        // return;
-            // }, function(error) {
-                // console.log('FAILED...', error);
-            // });
+        emailjs.send("service_zhua4wc","template_spqer1u", Datos, "user_HPt4N1jpTCSwJcAv87Vgq")
+            .then(function(response) {
+                if (response) {
+                    setModalIsOpen(true);
+                    e.target.reset();
+                }
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
     }
     return (
         <>
@@ -83,9 +78,12 @@ const Contacto = () => {
                     </form>  
             </section>  
             <Modal open={modalIsOpen}>
-                <div className="pop-up">
-                    <img src="/assets/svg/undraw_Mail_sent_green.svg" alt="" />
-                    <p> ¡El mensaje se envió correctamente! </p>
+                <div className="overlay overlay_pop-up">
+                    <div className="pop-up">
+                        <img src="/assets/svg/undraw_Mail_sent_green.svg" alt="" />
+                        <p> ¡El mensaje se envió correctamente! </p>
+                        <button onClick={() => setModalIsOpen(false)}>OK</button>
+                    </div>
                 </div>
             </Modal>
         </>

@@ -7,7 +7,6 @@ import './css/App.sass';
 
 
 function App() {
-  // history.replaceState(stateObj, '', 'bar2.html')
   return (
       <>
       <header>
