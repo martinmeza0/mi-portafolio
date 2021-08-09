@@ -5,7 +5,6 @@ import Proyecto from './components/Proyecto';
 import Contacto from './components/Contacto';
 import './css/App.sass';
 
-
 function App() {
   return (
       <>
@@ -21,28 +20,28 @@ function App() {
       <main>
         <article className="container" id="mis-proyectos">
           <Proyecto
-            imagen='/assets/img/agenda.jpg'
+            imagen='/assets/img/agenda de contacto.jpg'
             titulo="Agenda de contacto"
             categorias="HTML - CSS - JS"
-            texto=" Donec iaculis, ligula vitae viverra aliquet, massa mi dapibus leo, id ullamcorper velit purus vel dui. Proin tempor blandit leo vel suscipit. Nam vel eros a leo sagittis volutpat in auctor risus. Mauris ultricies sem fringilla quam facilisis, at convallis erat euismod. "
+            texto="Una agenda de contacto donde la informacion se guarda en el local storage, se integró la libreria sweetalert2 para los pop-ups"
             linkPag="https://martinmeza0.github.io/agenda-contacto/"
             linkCode="https://github.com/martinmeza0/agenda-contacto"
           />
           <Proyecto
-            imagen='/assets/img/agenda.jpg'
-            titulo="Agenda de contacto"
-            categorias="HTML - CSS - JS"
-            texto="una agenda de contacto, la informacion se guarda en el local storage del navegador"
-            linkPag="https://martinmeza0.github.io/agenda-contacto/"
-            linkCode="https://github.com/martinmeza0/agenda-contacto"
+            imagen='/assets/img/25Alfajores.jpg'
+            titulo="25alfajores"
+            categorias="HTML - SASS - JS"
+            texto="Una pagina de comidas para un emprendimiento de alfajores artesanales, cuenta con un menu de precios y un carousel de fotos"
+            linkPag="https://martinmeza0.github.io/blog-comida/"
+            linkCode="https://github.com/martinmeza0/blog-comida"
           />
           <Proyecto
-            imagen='/assets/img/agenda.jpg'
-            titulo="Agenda de contacto"
+            imagen='/assets/img/Juego de memoria.jpg'
+            titulo="Juego de memoria"
             categorias="HTML - CSS - JS"
-            texto="una agenda de contacto, la informacion se guarda en el local storage del navegador"
-            linkPag="https://martinmeza0.github.io/agenda-contacto/"
-            linkCode="https://github.com/martinmeza0/agenda-contacto"
+            texto=" Un juego de cartas con el objetivo de encontrar el par de cartas; se toma en cuenta los movimientos acertados y los incorrecto, tambien incluye un cronometro que cuenta hasta que todas las cartas esten dadas vueltas"
+            linkPag="https://martinmeza0.github.io/memory-game/"
+            linkCode="https://github.com/martinmeza0/memory-game"
           />
         </article>
       </main>

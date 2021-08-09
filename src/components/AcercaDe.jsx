@@ -13,6 +13,7 @@ const AcercaDe = () => {
                     <h4>...Cuando no estoy programando</h4>
                     <p>Soy una <span>persona autodidacta</span>, me gusta aprender algo nuevo todo los dias y como aplicarlas en mi rutina para mejorar mi calidad de vida.</p>
                 </div>
+                <button><a href="#">Mi curriculum</a></button>
             </section>
         </>
     )

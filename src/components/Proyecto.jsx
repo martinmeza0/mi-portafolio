@@ -30,7 +30,7 @@ const Proyecto = (props) => {
                             <div className="card-container">
                                 <p className="categorias">{categorias} </p>
                                 <div className="link">
-                                    <a href={linkPag}>Demostracion <span className="material-icons">play_arrow</span></a>
+                                    <a href={linkPag}>Pagina<span className="material-icons">play_arrow</span></a>
                                     <a href={linkCode}>Codigo <span className="material-icons">code</span></a>
                                 </div>
                             </div>
