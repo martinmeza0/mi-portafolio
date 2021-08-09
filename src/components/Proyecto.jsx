@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import '../css/_Proyecto.sass';
 import Modal from './Modal';
 
@@ -6,12 +6,6 @@ const Proyecto = (props) => {
     const {imagen, titulo, categorias, texto, linkPag, linkCode} = props 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     
-    useEffect(() => {
-        document.addEventListener('click', Modal)
-        return () => {
-          document.removeEventListener('click', Modal);
-        }
-    })
     return (
         <>
             <div className="proyecto">

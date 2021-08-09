@@ -55,8 +55,8 @@ function App() {
           <Contacto/>
         </div>
          <div className="redes-sociales">
-            <a href="https://www.linkedin.com/in/martin-meza-0640311b7/"><i className="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/martinmeza0"><i className="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/martin-meza-0640311b7/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/martinmeza0" target="_blank"><i className="fab fa-github"></i></a>
         </div> 
       </footer>
       </>
