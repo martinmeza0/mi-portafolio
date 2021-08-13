@@ -20,7 +20,15 @@ function App() {
       <main>
         <article className="container" id="mis-proyectos">
           <Proyecto
-            imagen='/assets/img/agenda de contacto.jpg'
+            imagen='/assets/img/Martin Meza portafolio.jpg'
+            titulo="Portafolio de Martin Meza"
+            categorias="SASS - REACT"
+            texto="Mi portafolio web creado en react, con dependencias como emailjs para reenviar mensajes a mi email y react-hook-form para el formulario de contacto"
+            linkPag="Ya estas acá"
+            linkCode="https://github.com/martinmeza0/mi-portafolio"
+          />
+          <Proyecto
+            imagen='/assets/img/Agenda de contacto.jpg'
             titulo="Agenda de contacto"
             categorias="HTML - CSS - JS"
             texto="Una agenda de contacto donde la informacion se guarda en el local storage, se integró la libreria sweetalert2 para los pop-ups"
