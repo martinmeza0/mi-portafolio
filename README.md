@@ -2,10 +2,10 @@
 
 Codigo de mi portafolio personal hecho en `React.js`
 
-## Librerias usadas:
+## Librerias/dependencias usadas:
 
 `React-hook-form` - para validar el formulario contacto.
-`Email.js` - usado como backend para el formulario de contacto y enviar mensajes hacia al email
+`Email.js` - usado para redirigir los mensajes del formulario de contacto y enviarlos hacia mi correo
 `Sass` - framework de CSS
 
 ## Funcionalidades: 
