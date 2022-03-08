@@ -2,10 +2,11 @@
 
 Codigo de mi portafolio personal hecho en `React.js`
 
-## Librerias/dependencias usadas:
+## dependencias usadas:
 
-`React-hook-form` - para validar el formulario contacto.
-`Email.js` - usado para redirigir los mensajes del formulario de contacto y enviarlos hacia mi correo
+`Firebase` - hosting del sitio web
+`React-hook-form` - para la validacion del formulario de contacto
+`Email.js` - envia el mensaje del formulario hacía el correo electronico
 `Sass` - framework de CSS
 
 ## Funcionalidades: 
