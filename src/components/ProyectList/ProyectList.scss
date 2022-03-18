@@ -1,0 +1,16 @@
+@import "../../css/mediaqueries";
+
+main .container {
+  padding-bottom: 30vh;
+  padding-top: 30vh;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  @include tablet-size {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile-size {
+    padding-top: 15vh;
+    grid-template-columns: 1fr;
+  }
+}

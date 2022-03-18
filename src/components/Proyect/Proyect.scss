@@ -1,0 +1,136 @@
+@import "../../css/mediaqueries";
+@import "../../css/Variables";
+.proyect {
+  img {
+    position: relative;
+    bottom: 0;
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: 0px 5px 10px -2px rgba(0,0,0,0.45);
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    &:hover {
+      bottom: 10px;
+      position: relative;
+      box-shadow: 0px 20px 10px -12px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#343434, .6);
+  transition: all .2s linear;
+  animation-name: Overlay-animation;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+}
+.Modal {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  margin: auto;
+  background: none;
+  text-align: right;
+  transition: all .3s linear;
+  animation-name: Modal-animation;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  header {
+    display: flex;
+    background: none;
+    color: $thirdColor;
+    .title {
+      margin-right: auto;
+      text-align: left;
+    }
+    .close {
+      cursor: pointer;
+      &:hover {
+        transition: all .3s;
+        color: #ef233c;
+      }
+    }
+  }
+  .body {
+    background-color: $backgroundColor;
+    width: 100%;
+    max-height: 600px;
+    overflow: auto;
+    margin: auto;
+    text-align: left;
+    overflow: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .description {
+      min-height: 100px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      .technology {
+        font-size: 0.9rem;
+        color: $secondaryColor;
+      }
+      .link a {
+        display: inline-flex;
+        text-decoration: none;
+        padding: 0px 5px;
+        color: $mainColor;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        &:hover {
+          transform: scale(1.1);
+          transition: all .2s;
+        }
+      }
+    }
+  }
+  @include tablet-size {
+    width: 70vw;
+    .body {
+      max-height: 500px;
+      overflow: auto;
+    }
+  }
+  @include mobile-size {
+    width: 90vw;
+    margin: auto;
+    .body .card-container {
+      flex-direction: column;
+    }
+  }
+}
+@keyframes Overlay-animation {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Modal-animation {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 50%;
+  }
+};

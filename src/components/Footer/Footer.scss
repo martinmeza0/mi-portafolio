@@ -1,0 +1,38 @@
+@import "../../css/mediaqueries";
+@import "../../css/Variables";
+footer {
+  .socialnetwork {
+    margin-top: 10px;
+    text-align: center;
+    padding: 30px 0;
+    background: url('background.jpg') fixed no-repeat  $mainColor;
+    background-size: cover;
+    i {
+      position: relative;
+      padding: 10px 10px;
+      margin: 0 20px;
+      border-radius: 100%;
+      color: $thirdColor;
+      font-size: 2rem;
+      cursor: pointer;
+      &::after {
+        bottom: 0;
+        content: "";
+        height: .125rem;
+        left: 50%;
+        position: absolute;
+        background: $thirdColor;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+      &:active {
+        transition: .3s;
+        color: #ccc;
+      }
+    }
+  }
+}

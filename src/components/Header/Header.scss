@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import "../../css/mediaqueries";
+@import "../../css/Variables";
+
+.main_header {
+  height: 78vh;
+  overflow: hidden;
+  background: url('background.jpg') fixed no-repeat  $mainColor;
+  background-size: cover;
+  text-align: center;
+  .name_profesion {
+    backdrop-filter: blur(2px );
+    display: inline-block;
+    margin-top: 30vh;
+    padding: 40px;
+    border: 1px solid $thirdColor;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+    h1 {
+      font-weight: 800;
+      color: $thirdColor;
+      font-size: 3.75rem;
+    }
+    h2 {
+      font-weight: 300;
+      color: $thirdColor;
+      font-size: 1.875rem;
+    }
+  }
+  @include mobile-size {
+    .nombre-profesion {
+      padding: 20px;
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
