@@ -1,5 +1,5 @@
-@import "../../css/mediaqueries";
-@import "../../css/Variables";
+@import "../../styles/mediaqueries";
+@import "../../styles/Variables";
 .proyect {
   img {
     position: relative;
@@ -57,8 +57,8 @@
     .close {
       cursor: pointer;
       &:hover {
-        transition: all .3s;
-        color: #ef233c;
+        transition: all .2s;
+        color: $errorColor;
       }
     }
   }
@@ -95,9 +95,9 @@
         color: $mainColor;
         margin-right: 10px;
         margin-bottom: 5px;
+        transition: all .2s;
         &:hover {
           transform: scale(1.1);
-          transition: all .2s;
         }
       }
     }

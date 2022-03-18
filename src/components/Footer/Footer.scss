@@ -1,11 +1,11 @@
-@import "../../css/mediaqueries";
-@import "../../css/Variables";
+@import "../../styles/mediaqueries";
+@import "../../styles/Variables";
 footer {
   .socialnetwork {
     margin-top: 10px;
     text-align: center;
     padding: 30px 0;
-    background: url('background.jpg') fixed no-repeat  $mainColor;
+    background: url('../../styles/background.jpg') fixed no-repeat  $mainColor;
     background-size: cover;
     i {
       position: relative;

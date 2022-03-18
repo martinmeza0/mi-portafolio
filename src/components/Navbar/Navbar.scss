@@ -1,5 +1,5 @@
-@import "../../css/mediaqueries";
-@import "../../css/Variables";
+@import "../../styles/mediaqueries";
+@import "../../styles/Variables";
 
 nav {
   width: 100vw;
@@ -70,6 +70,9 @@ nav {
       margin-top: 10px;
       position: relative;
       z-index: 3;
+      i {
+        transition: all .3s;
+      }
     }
     ul {
       position: absolute;
@@ -96,7 +99,6 @@ nav {
     }
     #check:checked ~ .checkbtn i {
       transform: rotate(90deg);
-      transition: all .3s;
     }
   }
   @include mobile-size {

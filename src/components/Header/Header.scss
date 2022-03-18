@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
-@import "../../css/mediaqueries";
-@import "../../css/Variables";
+@import "../../styles/mediaqueries";
+@import "../../styles/Variables";
 
 .main_header {
   height: 78vh;
   overflow: hidden;
-  background: url('background.jpg') fixed no-repeat  $mainColor;
+  background: url('../../styles/background.jpg') fixed no-repeat  $mainColor;
   background-size: cover;
   text-align: center;
   .name_profesion {

@@ -1,12 +1,10 @@
-@import "../../css/mediaqueries";
-@import "../../css/Variables";
+@import "../../styles/mediaqueries";
+@import "../../styles/Variables";
 .aboutme {
   padding-bottom: 20vh;
   padding-top: 15vh;
   text-align: center;
-  @media screen and (max-width: 27rem) {
-    padding: 5vh 15px;
-  }
+  @include mobile-size {padding-top: 7vh}
   .information {
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.38);
     background-color: $thirdColor;
@@ -43,10 +41,10 @@
       border: 2px solid $secondaryColor;
       background: none;
       font-size: 1.1rem;
+      transition: all .2s ease-in-out;
       &:hover {
         transform: scale(1.1);
         box-shadow: 0px 0px 6px 0px rgba($secondaryColor,.38);
-        transition: all .2s ease-in-out;
         cursor: pointer;
       }
       a {
@@ -54,8 +52,15 @@
         color: $textColor;
       }
     }
-  }
-  @include mobile-size {
-    padding-top: 7vh;
+    @include mobile-size {
+      padding: 5vh 15px;
+      h3,h4{
+        font-size: 1.1rem;
+        margin: 15px 10px;
+      }
+      img {
+        width: 50%
+      }
+    }
   }
 }
