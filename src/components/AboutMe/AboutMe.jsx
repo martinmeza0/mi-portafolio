@@ -14,7 +14,7 @@ const AboutMe = () => {
           <h3>...When i'm not coding</h3>
           <p>I consider myself as a <span>self taught</span> person that never stop learning new things every day. This is my quality that brought me here.</p>
         </div>
-        <button><a href='/assets/MartinMeza.pdf'>My CV</a></button>
+        <button><a href='/assets/Martin Meza.pdf'>My CV</a></button>
       </section>
     </div>
     </>
